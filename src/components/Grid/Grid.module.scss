@@ -6,7 +6,7 @@ $spacing: (
 
 $breakpoints: (
   'sm': 600px,
-  'md': 900px,
+  'md': 960px,
   'lg': 1280px,
 );
 
@@ -14,16 +14,17 @@ $justifyContent: (flex-start, flex-end, center, space-between);
 $alignItems: (flex-start, flex-end, center);
 
 @mixin breakpoint($name) {
-  @media screen and (min-width: map-get($breakpoints, $name)) {
+  @media screen and (min-width: map-get($breakpoints, $name )) {
     @content;
   }
 }
 
 .Grid {
   &_container {
-    height: 100%;
     display: flex;
     flex-wrap: wrap;
+
+    height: 100%;
   }
 
   &_item {
@@ -64,6 +65,7 @@ $alignItems: (flex-start, flex-end, center);
     &_spacing_#{$name} {
       margin: -$value;
     }
+
     &_spacing_#{$name} > &_item {
       padding: $value;
     }
