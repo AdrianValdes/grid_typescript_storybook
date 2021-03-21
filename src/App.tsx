@@ -6,15 +6,15 @@ function App() {
   return (
     <div className='App'>
       <Grid container>
-        <Grid item>
+        <Grid item cols={12}>
           <Box>Box 1</Box>
         </Grid>
 
-        <Grid item>
+        <Grid item cols={3}>
           <Box>Box 2</Box>
         </Grid>
 
-        <Grid item>
+        <Grid item cols={3}>
           <Box>Box 3</Box>
         </Grid>
       </Grid>
