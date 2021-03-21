@@ -18,4 +18,5 @@ code {
 
 .App {
   margin: 16px;
+  position: relative;
 }
