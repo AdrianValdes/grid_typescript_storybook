@@ -7,7 +7,7 @@ type Spacing = 'sm' | 'md' | 'lg';
 type JustifyContent = 'flex-start' | 'center' | 'flex-end' | 'space-between';
 type AlignItems = 'flex-start' | 'center' | 'flex-end';
 
-type PropTypes = {
+export type GridProps = {
   children: ReactNode;
   container?: boolean;
   item?: boolean;
@@ -21,7 +21,7 @@ type PropTypes = {
   style?: CSSProperties;
 };
 
-const Grid = ({
+export const Grid = ({
   children,
   container,
   item,
@@ -32,8 +32,8 @@ const Grid = ({
   spacing,
   justifyContent,
   alignItems,
-  ...style
-}: PropTypes): JSX.Element => {
+  style,
+}: GridProps): JSX.Element => {
   const classNames = cn({
     [styles.Grid_container]: container,
     [styles.Grid_item]: item,
@@ -46,10 +46,8 @@ const Grid = ({
     [styles[`Grid_alignItems_${alignItems}`]]: alignItems,
   });
   return (
-    <div className={classNames} {...style}>
+    <div className={classNames} style={style}>
       {children}
     </div>
   );
 };
-
-export default Grid;

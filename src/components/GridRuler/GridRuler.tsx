@@ -8,7 +8,7 @@ type PropTypes = {
   spacing?: Spacing;
 };
 
-const GridRuler = ({ spacing }: PropTypes) => {
+export const GridRuler = ({ spacing }: PropTypes) => {
   const classNames = cn(styles.GridRuler, {
     [styles[`GridRuler_spacing_${spacing}`]]: spacing,
   });
@@ -16,11 +16,9 @@ const GridRuler = ({ spacing }: PropTypes) => {
     <div className={classNames}>
       {Array(12)
         .fill(undefined)
-        .map((num) => (
-          <div className={styles.GridRuler_item} key={num} />
+        .map((_, i) => (
+          <div className={styles.GridRuler_item} key={i + 1} />
         ))}
     </div>
   );
 };
-
-export default GridRuler;

@@ -5,7 +5,6 @@ type AppProps = {
   children: ReactNode;
 };
 
-const Box = ({ children }: AppProps): JSX.Element => {
+export const Box = ({ children }: AppProps): JSX.Element => {
   return <div className={styles.Box}>{children}</div>;
 };
-export default Box;
