@@ -1,1 +1,1 @@
-# This is a reusable grid built with Typescript, SCSS and Storybook for documentation.
+# Reusable Grid built with Typescript and SCSS
